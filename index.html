@@ -15,6 +15,7 @@
             --success: #2ecc71;
             --warning: #f39c12;
             --danger: #e74c3c;
+            --info: #17a2b8;
         }
         
         * {
@@ -144,6 +145,14 @@
             border-radius: 0 5px 5px 0;
         }
         
+        .clinical-alert {
+            background: #e8f4fc;
+            border-left: 4px solid var(--info);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
         .table-container {
             overflow-x: auto;
             margin: 20px 0;
@@ -188,6 +197,14 @@
             transform: translateY(-2px);
         }
         
+        .trial-link.emerging {
+            background: var(--warning);
+        }
+        
+        .trial-link.emerging:hover {
+            background: #e67e22;
+        }
+        
         .action-plan {
             background: #e8f4fc;
             border-radius: 8px;
@@ -225,6 +242,43 @@
             border-radius: 0 4px 4px 0;
         }
         
+        .breakthrough {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .fda-approved {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .clinical-trial {
+            background: #cce5ff;
+            color: #004085;
+        }
+        
+        .emerging {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .preclinical {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
@@ -244,118 +298,152 @@
     <div class="container">
         <header>
             <h1>Pilocytic Astrocytoma Treatment Guide</h1>
-            <p class="subtitle">Advanced Therapeutic Strategies Beyond Traditional Chemotherapy</p>
+            <p class="subtitle">Evidence-Based Precision Medicine Beyond Traditional Chemotherapy</p>
         </header>
         
         <div class="content">
             <div class="section">
                 <h2><i class="fas fa-brain"></i> Understanding Pilocytic Astrocytoma</h2>
-                <p>Pilocytic Astrocytoma (PA) is a common pediatric brain tumor that typically has a favorable prognosis. However, when located in critical areas like the optic pathway or brainstem, treatment becomes challenging. The good news is that its predictable genetics make it an ideal candidate for targeted therapies.</p>
+                <p>Pilocytic Astrocytoma (PA) is the most common pediatric brain tumor with generally favorable outcomes when completely resectable. However, tumors in critical locations like the optic pathway or brainstem present significant treatment challenges. The good news is that PA has predictable genetic drivers that make it an ideal candidate for targeted therapies.</p>
                 
                 <div class="highlight">
-                    <p><strong>Key Genetic Features:</strong> Most PAs are driven by either a <strong>BRAF-KIAA1549 fusion</strong> (70-80% of cases) or a <strong>BRAF V600E mutation</strong> (5-10% of cases). These specific genetic alterations create opportunities for precision medicine approaches.</p>
+                    <p><strong>Key Genetic Features:</strong> Most PAs are driven by <strong>KIAA1549-BRAF fusion</strong> (50-70% of cases) or <strong>BRAF V600E mutation</strong> (9-10% of cases). Additional targets include <strong>FGFR1 mutations</strong> (15% of adult PA cases) and <strong>NF1-related pathway alterations</strong>.</p>
+                </div>
+                
+                <div class="clinical-alert">
+                    <p><strong>Clinical Reality:</strong> Current standard treatment involves surgery when possible, followed by carboplatin/vincristine chemotherapy for unresectable or progressive disease. However, targeted therapies are rapidly becoming first-line alternatives based on recent clinical trial successes.</p>
                 </div>
             </div>
             
             <div class="section">
-                <h2><i class="fas fa-pills"></i> First-Line Targeted Therapies</h2>
-                <p>When complete surgical resection isn't possible, these targeted therapies offer effective alternatives to traditional chemotherapy:</p>
+                <h2><i class="fas fa-pills"></i> Current FDA-Approved & Late-Stage Targeted Therapies</h2>
+                <p>These evidence-based treatments represent the current standard for molecularly-driven PA therapy:</p>
                 
                 <div class="card-container">
                     <div class="card">
-                        <div class="card-header">BRAF Inhibitors</div>
+                        <div class="card-header">MEK Inhibitors <span class="status-badge fda-approved">FDA APPROVED</span></div>
                         <div class="card-body">
-                            <p><strong>Drugs:</strong> Dabrafenib, Vemurafenib</p>
-                            <p><strong>Target:</strong> BRAF V600E mutation</p>
-                            <p><strong>Effectiveness:</strong> Shrinks tumors rapidly with minimal neurocognitive side effects.</p>
-                            <p><strong>Trial Data:</strong> 40% tumor reduction in 90% of PA patients.</p>
-                            <a href="https://clinicaltrials.gov/ct2/show/NCT03363217" class="trial-link" target="_blank">View Clinical Trial</a>
+                            <p><strong>Drug:</strong> Selumetinib (Koselugo)</p>
+                            <p><strong>Target:</strong> BRAF fusions & BRAF V600E mutations</p>
+                            <p><strong>Evidence:</strong> 36% response rate in BRAF-aberrant PA, 40% in NF1-associated cases</p>
+                            <p><strong>Status:</strong> FDA-approved for NF1 plexiform neurofibromas; Phase 3 trials ongoing for newly diagnosed PA</p>
+                            <div class="note">
+                                <p><strong>Breakthrough:</strong> Children's Oncology Group is now comparing selumetinib to standard chemotherapy as first-line treatment</p>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="card">
-                        <div class="card-header">MEK Inhibitors</div>
+                        <div class="card-header">Dual BRAF/MEK Inhibition <span class="status-badge clinical-trial">CLINICAL TRIALS</span></div>
                         <div class="card-body">
-                            <p><strong>Drugs:</strong> Trametinib, Selumetinib</p>
-                            <p><strong>Target:</strong> BRAF fusion-driven pathways</p>
-                            <p><strong>Effectiveness:</strong> Provides durable tumor control with FDA approval for NF1-related PA.</p>
-                            <p><strong>Results:</strong> 93% progression-free survival at 3 years.</p>
-                            <a href="https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-selumetinib-neurofibromatosis-type-1-symptomatic-inoperable-plexiform-neurofibromas" class="trial-link" target="_blank">FDA Approval Info</a>
+                            <p><strong>Drugs:</strong> Dabrafenib + Trametinib</p>
+                            <p><strong>Target:</strong> BRAF V600E mutations specifically</p>
+                            <p><strong>Advantage:</strong> More potent and durable responses than single-agent therapy</p>
+                            <p><strong>Evidence:</strong> Dramatic responses reported in adult PA cases; pediatric trials expanding</p>
+                            <a href="https://clinicaltrials.gov/search?cond=pilocytic%20astrocytoma&term=dabrafenib" class="trial-link" target="_blank">Search Current Trials</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="note">
-                    <p><strong>Why this beats chemotherapy:</strong> These oral drugs specifically target tumor cells without damaging healthy brain tissue, preserving cognitive function and quality of life.</p>
+                <div class="breakthrough">
+                    <p><strong>Clinical Breakthrough:</strong> Recent studies show MEK inhibitors can achieve tumor shrinkage rates not seen with traditional chemotherapy, while preserving cognitive function and quality of life.</p>
                 </div>
             </div>
             
             <div class="section">
-                <h2><i class="fas fa-dna"></i> Advanced Treatment Options</h2>
-                <p>For recurrent or treatment-resistant Pilocytic Astrocytoma, these cutting-edge approaches show great promise:</p>
+                <h2><i class="fas fa-microscope"></i> Next-Generation Targeted Approaches</h2>
+                <p>These advanced therapies are currently in clinical development:</p>
                 
-                <h3>CRISPR-Based "Gene Surgery"</h3>
-                <p>Corrects the BRAF fusion gene inside tumor cells to stop growth. Preclinical studies at Boston Children's Hospital (2023) show significant success.</p>
+                <h3>Advanced RAF Inhibitors <span class="status-badge clinical-trial">PHASE 1/2</span></h3>
+                <p><strong>PLX8394 & TAK580:</strong> "Paradox-breaker" RAF inhibitors designed specifically for BRAF fusion tumors. Unlike traditional BRAF inhibitors, these can effectively target fusion-driven cancers without causing paradoxical activation.</p>
                 
-                <h3>Focused Ultrasound + Targeted Therapy</h3>
-                <p>Combination approach that opens the blood-brain barrier at the tumor site and delivers concentrated BRAF inhibitors directly to tumor cells.</p>
+                <h3>FGFR Inhibitors <span class="status-badge emerging">EMERGING</span></h3>
+                <p><strong>Erdafitinib, Ponatinib:</strong> For PA with FGFR1 mutations (found in 15% of adult cases, particularly extra-cerebellar locations). FGFR1 mutations are associated with worse outcomes, making this a critical therapeutic target.</p>
                 
-                <h3>Personalized Cancer Vaccines</h3>
-                <p>Neoantigen vaccines train the immune system to target PA-specific fusion proteins:</p>
-                <a href="https://www.nature.com/articles/s41392-022-01270-x" class="trial-link" target="_blank">Neoantigens: promising cancer therapy</a>
+                <h3>Combination Immunotherapy <span class="status-badge emerging">EMERGING</span></h3>
+                <p>Since many PAs are immunologically "cold," combining targeted therapy with immune checkpoint inhibitors or novel immune activators may enhance effectiveness.</p>
             </div>
             
             <div class="section">
-                <h2><i class="fas fa-heartbeat"></i> Monitoring & Prevention</h2>
-                <p>Advanced monitoring technologies enable early detection and intervention:</p>
+                <h2><i class="fas fa-dna"></i> Emerging Cellular & Gene Therapies</h2>
+                <p>These cutting-edge approaches show promise but require further development:</p>
+                
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-header">CAR-T Cell Therapy <span class="status-badge emerging">PROOF-OF-CONCEPT</span></div>
+                        <div class="card-body">
+                            <p><strong>Current Status:</strong> Breakthrough results in related brain tumors (GD2 CAR-T for diffuse midline gliomas, B7-H3 CAR-T for DIPG)</p>
+                            <p><strong>PA Application:</strong> Researchers are developing PA-specific CAR-T approaches targeting BRAF fusion proteins</p>
+                            <p><strong>Timeline:</strong> Early clinical trials expected within 2-3 years</p>
+                            <a href="https://www.cancer.gov/news-events/cancer-currents-blog/2025/car-t-cell-therapy-gd2-diffuse-midline-gliomas" class="trial-link emerging" target="_blank">Learn About Brain Tumor CAR-T Success</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">CRISPR Gene Editing <span class="status-badge preclinical">PRECLINICAL</span></div>
+                        <div class="card-body">
+                            <p><strong>Concept:</strong> Direct correction of BRAF fusion genes within tumor cells</p>
+                            <p><strong>Status:</strong> Promising preclinical results at major research centers</p>
+                            <p><strong>Challenge:</strong> Delivery to brain tissue and ensuring safety</p>
+                            <p><strong>Timeline:</strong> 5-7 years to clinical trials</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><i class="fas fa-heartbeat"></i> Advanced Monitoring & Prevention</h2>
+                <p>Novel approaches to detect progression and optimize treatment:</p>
                 
                 <div class="card-container">
                     <div class="card">
                         <div class="card-header">Liquid Biopsy</div>
                         <div class="card-body">
-                            <p>Detects tumor-specific cfDNA in blood or spinal fluid, allowing recurrence detection years before MRI changes.</p>
-                            <p><strong>Example:</strong> Cappio Seq test (90% sensitivity for PA mutations)</p>
+                            <p><strong>Technology:</strong> Detection of circulating tumor DNA (ctDNA) in blood or cerebrospinal fluid</p>
+                            <p><strong>Advantage:</strong> Can detect recurrence months before MRI changes</p>
+                            <p><strong>Current Status:</strong> Research tools becoming clinically available</p>
                         </div>
                     </div>
                     
                     <div class="card">
-                        <div class="card-header">Wearable AI Monitoring</div>
+                        <div class="card-header">Pharmacogenomic Testing</div>
                         <div class="card-body">
-                            <p>EEG headbands (e.g., EMOTIV) combined with AI algorithms detect subtle brain activity shifts that signal tumor progression.</p>
-                            <a href="https://www.emotiv.com/medical/" class="trial-link" target="_blank">Learn More</a>
+                            <p><strong>Purpose:</strong> Optimize drug dosing based on individual metabolism</p>
+                            <p><strong>Relevance:</strong> Critical for MEK inhibitors which have narrow therapeutic windows</p>
+                            <p><strong>Implementation:</strong> Increasingly standard in pediatric oncology</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="section">
-                <h2><i class="fas fa-flask"></i> Future Curative Approaches</h2>
-                <p>These innovative treatments are currently in clinical trials:</p>
+                <h2><i class="fas fa-flask"></i> Clinical Trials & Research Access</h2>
+                <p>How to access cutting-edge treatments:</p>
                 
                 <div class="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>Treatment Approach</th>
-                                <th>How It Works</th>
-                                <th>Trial Access</th>
+                                <th>Research Consortium</th>
+                                <th>Focus Areas</th>
+                                <th>Access Information</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>CAR-T Cells</td>
-                                <td>Engineered T-cells target BRAF fusion proteins</td>
-                                <td><a href="https://clinicaltrials.gov/ct2/show/NCT04185038" target="_blank">SICKKIDS Toronto Trial</a></td>
+                                <td>Children's Oncology Group (COG)</td>
+                                <td>Phase 3 selumetinib vs. chemotherapy</td>
+                                <td><a href="https://www.childrensoncologygroup.org/clinicaltrials-136" target="_blank">COG Clinical Trials</a></td>
                             </tr>
                             <tr>
-                                <td>mRNA "Reset" Therapy</td>
-                                <td>Delivers corrected BRAF RNA to tumor cells</td>
-                                <td><a href="https://biontech.de/pipeline" target="_blank">BioNTech PEACH Trial</a></td>
+                                <td>Pediatric Neuro-Oncology Consortium (PNOC)</td>
+                                <td>Novel targeted therapies</td>
+                                <td><a href="https://pnoc.us/clinical-trials/" target="_blank">PNOC Trials</a></td>
                             </tr>
                             <tr>
-                                <td>Epigenetic Drugs</td>
-                                <td>Reactivates tumor suppressor genes (CDKN2A)</td>
-                                <td><a href="https://clinicaltrials.gov/ct2/show/NCT05009992" target="_blank">PNOC022 Trial</a></td>
+                                <td>Children's Brain Tumor Network (CBTN)</td>
+                                <td>Genomic analysis & precision medicine</td>
+                                <td><a href="https://cbtn.org/" target="_blank">CBTN Resources</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -363,15 +451,17 @@
             </div>
             
             <div class="action-plan">
-                <h3>Action Plan for Patients and Families</h3>
+                <h3>Evidence-Based Action Plan for Patients and Families</h3>
                 <ol>
-                    <li><strong>Test tumor genetics</strong> - Confirm BRAF fusion/V600E via comprehensive genomic sequencing</li>
-                    <li><strong>Seek precision trials</strong> - If frontline treatments fail, enroll in cutting-edge trials like CRISPR-edited CAR-T or mRNA vaccines</li>
-                    <li><strong>Implement liquid biopsies</strong> - Replace frequent surveillance MRIs with blood-based monitoring</li>
-                    <li><strong>Connect to research consortia</strong>:
+                    <li><strong>Comprehensive Molecular Testing</strong> - Ensure testing for KIAA1549-BRAF fusion, BRAF V600E mutation, and FGFR1 alterations</li>
+                    <li><strong>Consider First-Line Targeted Therapy</strong> - For unresectable or progressive PA, discuss MEK inhibitors with your oncologist before traditional chemotherapy</li>
+                    <li><strong>Enroll in Research Studies</strong> - Participate in tissue banking and clinical trials to access newest treatments and advance research</li>
+                    <li><strong>Multidisciplinary Care</strong> - Ensure access to pediatric neuro-oncology, ophthalmology, endocrinology, and neuropsychology</li>
+                    <li><strong>Quality of Life Focus</strong> - Prioritize functional outcomes and neurocognitive preservation in treatment decisions</li>
+                    <li><strong>Connect with Support Networks</strong>:
                         <ul style="margin-top: 10px; margin-left: 20px;">
-                            <li><a href="https://pnoc.us/" target="_blank">Pacific Pediatric Neuro-Oncology Consortium (PNOC)</a></li>
-                            <li><a href="https://cbtn.org/" target="_blank">Children's Brain Tumor Network (CBTN)</a></li>
+                            <li><a href="https://cbtf.org/" target="_blank">Children's Brain Tumor Foundation</a></li>
+                            <li><a href="https://braintumor.org/" target="_blank">National Brain Tumor Society</a></li>
                         </ul>
                     </li>
                 </ol>
@@ -379,8 +469,8 @@
         </div>
         
         <footer>
-            <p>Pilocytic Astrocytoma Treatment Guide | Created from the latest research and clinical insights</p>
-            <p>Disclaimer: This information is for educational purposes only. Consult with a qualified neuro-oncologist for personalized medical advice.</p>
+            <p>Pilocytic Astrocytoma Treatment Guide | Updated with latest clinical evidence</p>
+            <p><strong>Important:</strong> This information is for educational purposes only. Always consult with qualified neuro-oncologists for personalized medical advice. Treatment decisions should be made based on individual tumor characteristics, patient factors, and current clinical guidelines.</p>
         </footer>
     </div>
 </body>
